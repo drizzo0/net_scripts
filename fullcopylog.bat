@@ -6,11 +6,14 @@ set "YY=%dt:~2,2%" & set "YYYY=%dt:~0,4%" & set "MM=%dt:~4,2%" & set "DD=%dt:~6,
 set "HH=%dt:~8,2%" & set "Min=%dt:~10,2%" & set "Sec=%dt:~12,2%"
 
 rem SETTING VARIABLES
+
 set "netadd=192.168.168.xx"
+
 set "net_path=Q:\\%netadd%\aaaaaaa /user:%USERNAME%"
+
 set "fullstamp=%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%"
-set "log_path=C:\Users\%USERNAME%\log\"
-set "full_log_path=C:\Users\%USERNAME%\log\%fullstamp%_full.log"
+set "log_path=C:\Users\%USERNAME%\log"
+set "full_log_path=%log_path%\%fullstamp%_full.log"
 
 IF NOT EXIST %log_path% mkdir %log_path%
 
