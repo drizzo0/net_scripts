@@ -14,6 +14,8 @@ set "net_path=Q:\\%netadd%\aaaaaaa /user:%USERNAME%"
 set "fullstamp=%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%"
 set "log_path=C:\Users\%USERNAME%\log"
 set "full_log_path=%log_path%\%fullstamp%_full.log"
+set "source_path=c:\Users\%USERNAME%\Documents\File di Outlook"
+set "dest_path=Q:\bksett1\posta"
 
 IF NOT EXIST %log_path% mkdir %log_path%
 
@@ -21,7 +23,8 @@ echo Starting full backup > %full_log_path%
 echo Mounting net directory: %net_path% >> %full_log_path%
 net use %net_path%
 echo Starting copy >> %full_log_path%
-ROBOCOPY "c:\Users\%USERNAME%\Documents\File di Outlook" "Q:\bksett1\posta" /MIR >> %full_log_path%
+ROBOCOPY %source_path% %dest_path% /MIR >> %full_log_path%
+echo. >> %full_log_path%
 echo Unmounting net directory >> %full_log_path%
 net use Q: /delete
 echo All done. >> %full_log_path%
