@@ -1,0 +1,1 @@
+net use Q:\\192.168.168.xx\aaaaaaa /user:credenziali utente
