@@ -23,7 +23,7 @@ echo Starting full backup > %full_log_path%
 echo Mounting net directory: %net_path% >> %full_log_path%
 net use %net_path%
 echo Starting copy >> %full_log_path%
-ROBOCOPY %source_path% %dest_path% /MIR >> %full_log_path%
+ROBOCOPY %source_path% %dest_path% >> %full_log_path%
 echo. >> %full_log_path%
 echo Unmounting net directory >> %full_log_path%
 net use Q: /delete
