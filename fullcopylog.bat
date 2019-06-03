@@ -4,8 +4,9 @@ rem SETTING VARIABLES
 
 set "netadd=192.168.168.xx"
 set "password=password"
+set "user=USERNAME"
 
-set "net_path=Q:\\%netadd%\aaaaaaa /user:%USERNAME% %password%"
+set "net_path=Q:\\%netadd%\aaaaaaa /user:%user% %password%"
 set "source_path=c:\Users\%USERNAME%\Documents\File di Outlook"
 set "dest_path=Q:\bksett1\posta"
 
